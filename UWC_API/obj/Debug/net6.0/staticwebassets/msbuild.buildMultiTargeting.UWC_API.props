@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\UWC_API.props" />
+</Project>
