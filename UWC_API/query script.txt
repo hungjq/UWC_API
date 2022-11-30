@@ -1,0 +1,7 @@
+--Collector
+INSERT INTO "Collector" Values ('2052504', 'Nguyen Hung', 'Truc Tuyen', 'Nhan vien thu gom', 'Xe rac 01', 1);
+INSERT INTO "Collector" Values ('2053355', 'Nguyen Tuan', 'Ngoai Tuyen', 'Nhan vien thu gom', 'Xe rac 02', 2);
+--MCP
+INSERT INTO "MCP" VALUES(1,'Tan Binh 01', '132 Tan Binh', 'Xe day 2',1000,70,'2052504','Nguyen Hung','2053325','Ky Phong');
+INSERT INTO "MCP" VALUES(2,'Tan Binh 02', '152 Tan Binh', 'Xe day 5',1000,80,'2052504','Nguyen Hung','2053321','Tuan Nhot');
+

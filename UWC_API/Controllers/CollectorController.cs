@@ -39,17 +39,13 @@ namespace UWC_API.Controllers
         [HttpPut]
         public async Task<ActionResult<List<Collector>>> Update(Collector request)
         {
-            var coldb = await this.context.Collector.FindAsync(request.eId);
+            var coldb = await this.context.Collector.FindAsync(request.employeeId);
             if (coldb == null) return BadRequest("not found");
 
             coldb.name = request.name;
-            coldb.vName = request.vName;
-            coldb.rName = request.rName;
+            coldb.vehicleName = request.vehicleName;
             coldb.status= request.status;
-            coldb.eId= request.eId;
-            coldb.rAddress= request.rAddress;
-            coldb.vId= request.vId;
-            coldb.rId= request.rId;
+            coldb.employeeId= request.employeeId;
 
             await this.context.SaveChangesAsync();
             return Ok(await this.context.Collector.ToListAsync());
