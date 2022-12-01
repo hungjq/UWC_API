@@ -6,8 +6,8 @@ namespace UWC_API
     public class MCP
     {
         [Key]
-        public int mcpId { get; set; }
-        public string mcpName { get; set; } = String.Empty;
+        public int id { get; set; }
+        public string name { get; set; } = String.Empty;
         public string address { get; set; } = String.Empty;
         public string trollerName { get; set; } = String.Empty;
         public int capacity { get; set; } = 0;

@@ -1,11 +1,15 @@
-Server: satao.db.elephantsql.com
-User: tbbyywjr
-Password:erfe0qFpsqycbaFQmoVUZ2ESz81AoYjs
+--Server: satao.db.elephantsql.com
+--User: tbbyywjr
+--Password:erfe0qFpsqycbaFQmoVUZ2ESz81AoYjs
 
 --Collector
 INSERT INTO "Collector" Values ('2052504', 'Nguyễn Hùng', 'Trực tuyến', 'Nhân viên thu gom', 'Xe rác 01', 1);
 INSERT INTO "Collector" Values ('2053355', 'Nguyễn Tuân', 'Ngoại tuyến', 'Nhân viên thu gom', 'Xe rác 02', 2);
 INSERT INTO "Collector" Values ('2052832', 'Đức Anh', 'Trực tuyến', 'Nhân viên thu gom', 'Xe rác 03', 3);
+--Janitor
+INSERT INTO "Janitor" Values ('2053325','Kỳ Phong','Trực Tuyến','Nhân viên vệ sinh','Xe rác 01',1, 1,'Tân Bình 01');
+--Vehicle
+INSERT INTO "Vehicle" Values(1,'Xe rác 01','Đang sử dụng', '51C-888-666',3000, 'Nguyễn Hùng', 'Tân Bình 01');
 --MCP
 INSERT INTO "MCP" VALUES(1,'Tân Bình 01', '132 Tân Bình', 'Xe đẩy 1',1000,70,'2052504','Nguyễn Hùng','2053325','Kỳ Phong');
 INSERT INTO "MCP" VALUES(2,'Tân Bình 02', '152 Tân Bình', 'Xe đảy 2',1000,80,'2052504','Nguyễn Hùng','2053321','Tuấn Nhột');
@@ -14,6 +18,6 @@ INSERT INTO "MCP" VALUES(4,'Q10 01', '66 Q10', 'Xe đảy 4',1200,80,'2053355','
 INSERT INTO "MCP" VALUES(5,'Q10 02', '102 Q10', 'Xe đảy 5',1100,80,'2053355','Nguyễn Tuân','2055565','Liễu Phạm');
 INSERT INTO "MCP" VALUES(6,'Q10 03', '189 Q10', 'Xe đảy 6',900,80,'2053355','Nguyễn Tuân','2056565','Ngọc Luyến');
 INSERT INTO "MCP" VALUES(7,'Phú Nhuận 01', '19A Phú Nhuận', 'Xe đảy 7',1000,100,'2052832','Đức Anh','2057565','Jackson Oii');
-INSERT INTO "MCP" VALUES(7,'Phú Nhuận 02', '126 Phú Nhuận', 'Xe đảy 8',1200,90,'2052832','Đức Anh','2058565','Connan lỏd');
-INSERT INTO "MCP" VALUES(7,'Phú Nhuận 03', '178B Phú Nhuận', 'Xe đảy 9',1300,60,'2052832','Đức Anh','2059565','Choker san');
+INSERT INTO "MCP" VALUES(8,'Phú Nhuận 02', '126 Phú Nhuận', 'Xe đảy 8',1200,90,'2052832','Đức Anh','2058565','Connan lỏd');
+INSERT INTO "MCP" VALUES(9,'Phú Nhuận 03', '178B Phú Nhuận', 'Xe đảy 9',1300,60,'2052832','Đức Anh','2059565','Choker san');
 

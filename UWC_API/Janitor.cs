@@ -6,7 +6,7 @@ namespace UWC_API
     public class Janitor
     {
         [Key]
-        public int employeeId { get; set; }
+        public int id { get; set; }
         public string name { get; set; } = String.Empty;
         public string status { get; set; } = String.Empty;
         public string job { get; set; } = String.Empty;

@@ -40,10 +40,10 @@ namespace UWC_API.Controllers
         [HttpPut]
         public async Task<ActionResult<List<Janitor>>> Update(Janitor request)
         {
-            var Janitordb = await this.context.Janitor.FindAsync(request.employeeId);
+            var Janitordb = await this.context.Janitor.FindAsync(request.id);
             if (Janitordb == null) return BadRequest("not found");
 
-           Janitordb.employeeId = request.employeeId;
+           Janitordb.id = request.id;
             Janitordb.name = request.name;  
             Janitordb.mcpName = request.mcpName;
             Janitordb.status = request.status;

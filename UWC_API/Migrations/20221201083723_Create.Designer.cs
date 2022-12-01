@@ -11,7 +11,7 @@ using UWC_API.Data;
 namespace UWCAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221201044530_Create")]
+    [Migration("20221201083723_Create")]
     partial class Create
     {
         /// <inheritdoc />
@@ -26,11 +26,11 @@ namespace UWCAPI.Migrations
 
             modelBuilder.Entity("UWC_API.Collector", b =>
                 {
-                    b.Property<int>("employeeId")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("employeeId"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
 
                     b.Property<string>("job")
                         .IsRequired()
@@ -51,18 +51,18 @@ namespace UWCAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("employeeId");
+                    b.HasKey("id");
 
                     b.ToTable("Collector");
                 });
 
             modelBuilder.Entity("UWC_API.Janitor", b =>
                 {
-                    b.Property<int>("employeeId")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("employeeId"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
 
                     b.Property<string>("job")
                         .IsRequired()
@@ -90,18 +90,18 @@ namespace UWCAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("employeeId");
+                    b.HasKey("id");
 
                     b.ToTable("Janitor");
                 });
 
             modelBuilder.Entity("UWC_API.MCP", b =>
                 {
-                    b.Property<int>("mcpId")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("mcpId"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
 
                     b.Property<string>("address")
                         .IsRequired()
@@ -124,7 +124,7 @@ namespace UWCAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("mcpName")
+                    b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -135,18 +135,18 @@ namespace UWCAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("mcpId");
+                    b.HasKey("id");
 
                     b.ToTable("MCP");
                 });
 
             modelBuilder.Entity("UWC_API.Vehicle", b =>
                 {
-                    b.Property<int>("vehicleId")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("vehicleId"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
 
                     b.Property<int>("capacity")
                         .HasColumnType("integer");
@@ -159,6 +159,10 @@ namespace UWCAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("plateNum")
                         .IsRequired()
                         .HasColumnType("text");
@@ -167,11 +171,7 @@ namespace UWCAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("vehicleName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("vehicleId");
+                    b.HasKey("id");
 
                     b.ToTable("Vehicle");
                 });

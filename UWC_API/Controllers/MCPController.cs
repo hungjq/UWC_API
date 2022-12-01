@@ -39,10 +39,10 @@ namespace UWC_API.Controllers
         [HttpPut]
         public async Task<ActionResult<List<MCP>>> Update(MCP request)
         {
-            var mcpdb = await this.context.MCP.FindAsync(request.mcpId);
+            var mcpdb = await this.context.MCP.FindAsync(request.id);
             if (mcpdb == null) return BadRequest("not found");
 
-            mcpdb.mcpName = request.mcpName;
+            mcpdb.name = request.name;
             mcpdb.address= request.address;
             mcpdb.collectorName = request.collectorName;
             mcpdb.janitorName= request.janitorName;

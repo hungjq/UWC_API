@@ -15,7 +15,7 @@ namespace UWCAPI.Migrations
                 name: "Collector",
                 columns: table => new
                 {
-                    employeeId = table.Column<int>(type: "integer", nullable: false)
+                    id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     name = table.Column<string>(type: "text", nullable: false),
                     status = table.Column<string>(type: "text", nullable: false),
@@ -25,14 +25,14 @@ namespace UWCAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Collector", x => x.employeeId);
+                    table.PrimaryKey("PK_Collector", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Janitor",
                 columns: table => new
                 {
-                    employeeId = table.Column<int>(type: "integer", nullable: false)
+                    id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     name = table.Column<string>(type: "text", nullable: false),
                     status = table.Column<string>(type: "text", nullable: false),
@@ -44,16 +44,16 @@ namespace UWCAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Janitor", x => x.employeeId);
+                    table.PrimaryKey("PK_Janitor", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "MCP",
                 columns: table => new
                 {
-                    mcpId = table.Column<int>(type: "integer", nullable: false)
+                    id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    mcpName = table.Column<string>(type: "text", nullable: false),
+                    name = table.Column<string>(type: "text", nullable: false),
                     address = table.Column<string>(type: "text", nullable: false),
                     trollerName = table.Column<string>(type: "text", nullable: false),
                     capacity = table.Column<int>(type: "integer", nullable: false),
@@ -65,16 +65,16 @@ namespace UWCAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MCP", x => x.mcpId);
+                    table.PrimaryKey("PK_MCP", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Vehicle",
                 columns: table => new
                 {
-                    vehicleId = table.Column<int>(type: "integer", nullable: false)
+                    id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    vehicleName = table.Column<string>(type: "text", nullable: false),
+                    name = table.Column<string>(type: "text", nullable: false),
                     status = table.Column<string>(type: "text", nullable: false),
                     plateNum = table.Column<string>(type: "text", nullable: false),
                     capacity = table.Column<int>(type: "integer", nullable: false),
@@ -83,7 +83,7 @@ namespace UWCAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Vehicle", x => x.vehicleId);
+                    table.PrimaryKey("PK_Vehicle", x => x.id);
                 });
         }
 

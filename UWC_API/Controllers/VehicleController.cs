@@ -39,10 +39,10 @@ namespace UWC_API.Controllers
         [HttpPut]
         public async Task<ActionResult<List<Vehicle>>> Update(Vehicle request)
         {
-            var Vehicledb = await this.context.Vehicle.FindAsync(request.vehicleId);
+            var Vehicledb = await this.context.Vehicle.FindAsync(request.id);
             if (Vehicledb == null) return BadRequest("not found");
 
-            Vehicledb.vehicleName = request.vehicleName;
+            Vehicledb.name = request.name;
             Vehicledb.plateNum= request.plateNum;
             Vehicledb.collectorName = request.collectorName;
             Vehicledb.status = request.status;
