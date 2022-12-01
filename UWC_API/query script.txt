@@ -1,3 +1,7 @@
+Server: satao.db.elephantsql.com
+User: tbbyywjr
+Password:erfe0qFpsqycbaFQmoVUZ2ESz81AoYjs
+
 --Collector
 INSERT INTO "Collector" Values ('2052504', 'Nguyễn Hùng', 'Trực tuyến', 'Nhân viên thu gom', 'Xe rác 01', 1);
 INSERT INTO "Collector" Values ('2053355', 'Nguyễn Tuân', 'Ngoại tuyến', 'Nhân viên thu gom', 'Xe rác 02', 2);

@@ -29,6 +29,25 @@ namespace UWCAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Janitor",
+                columns: table => new
+                {
+                    employeeId = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    name = table.Column<string>(type: "text", nullable: false),
+                    status = table.Column<string>(type: "text", nullable: false),
+                    job = table.Column<string>(type: "text", nullable: false),
+                    vehicleName = table.Column<string>(type: "text", nullable: false),
+                    vehicleId = table.Column<int>(type: "integer", nullable: false),
+                    mcpId = table.Column<int>(type: "integer", nullable: false),
+                    mcpName = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Janitor", x => x.employeeId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "MCP",
                 columns: table => new
                 {
@@ -48,6 +67,24 @@ namespace UWCAPI.Migrations
                 {
                     table.PrimaryKey("PK_MCP", x => x.mcpId);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Vehicle",
+                columns: table => new
+                {
+                    vehicleId = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    vehicleName = table.Column<string>(type: "text", nullable: false),
+                    status = table.Column<string>(type: "text", nullable: false),
+                    plateNum = table.Column<string>(type: "text", nullable: false),
+                    capacity = table.Column<int>(type: "integer", nullable: false),
+                    collectorName = table.Column<string>(type: "text", nullable: false),
+                    mcpName = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Vehicle", x => x.vehicleId);
+                });
         }
 
         /// <inheritdoc />
@@ -57,7 +94,13 @@ namespace UWCAPI.Migrations
                 name: "Collector");
 
             migrationBuilder.DropTable(
+                name: "Janitor");
+
+            migrationBuilder.DropTable(
                 name: "MCP");
+
+            migrationBuilder.DropTable(
+                name: "Vehicle");
         }
     }
 }

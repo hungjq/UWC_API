@@ -53,6 +53,45 @@ namespace UWCAPI.Migrations
                     b.ToTable("Collector");
                 });
 
+            modelBuilder.Entity("UWC_API.Janitor", b =>
+                {
+                    b.Property<int>("employeeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("employeeId"));
+
+                    b.Property<string>("job")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("mcpId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("mcpName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("vehicleId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("vehicleName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("employeeId");
+
+                    b.ToTable("Janitor");
+                });
+
             modelBuilder.Entity("UWC_API.MCP", b =>
                 {
                     b.Property<int>("mcpId")
@@ -96,6 +135,42 @@ namespace UWCAPI.Migrations
                     b.HasKey("mcpId");
 
                     b.ToTable("MCP");
+                });
+
+            modelBuilder.Entity("UWC_API.Vehicle", b =>
+                {
+                    b.Property<int>("vehicleId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("vehicleId"));
+
+                    b.Property<int>("capacity")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("collectorName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("mcpName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("plateNum")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("vehicleName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("vehicleId");
+
+                    b.ToTable("Vehicle");
                 });
 #pragma warning restore 612, 618
         }

@@ -8,5 +8,8 @@ namespace UWC_API.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
         public DbSet<Collector> Collector { get; set; }
         public DbSet<MCP> MCP { get; set; }
+        public DbSet<Janitor> Janitor { get; set; }
+        public DbSet<Vehicle> Vehicle { get; set; }
+
     }
 }
