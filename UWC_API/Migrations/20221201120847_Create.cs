@@ -18,7 +18,7 @@ namespace UWCAPI.Migrations
                     id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     name = table.Column<string>(type: "text", nullable: false),
-                    status = table.Column<string>(type: "text", nullable: false),
+                    status = table.Column<bool>(type: "boolean", nullable: false),
                     job = table.Column<string>(type: "text", nullable: false),
                     vehicleName = table.Column<string>(type: "text", nullable: false),
                     vehicleId = table.Column<int>(type: "integer", nullable: false)
@@ -35,7 +35,7 @@ namespace UWCAPI.Migrations
                     id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     name = table.Column<string>(type: "text", nullable: false),
-                    status = table.Column<string>(type: "text", nullable: false),
+                    status = table.Column<bool>(type: "boolean", nullable: false),
                     job = table.Column<string>(type: "text", nullable: false),
                     vehicleName = table.Column<string>(type: "text", nullable: false),
                     vehicleId = table.Column<int>(type: "integer", nullable: false),
@@ -75,7 +75,7 @@ namespace UWCAPI.Migrations
                     id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     name = table.Column<string>(type: "text", nullable: false),
-                    status = table.Column<string>(type: "text", nullable: false),
+                    isUsed = table.Column<bool>(type: "boolean", nullable: false),
                     plateNum = table.Column<string>(type: "text", nullable: false),
                     capacity = table.Column<int>(type: "integer", nullable: false),
                     collectorName = table.Column<string>(type: "text", nullable: false),

@@ -37,9 +37,8 @@ namespace UWCAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("status")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<bool>("status")
+                        .HasColumnType("boolean");
 
                     b.Property<int>("vehicleId")
                         .HasColumnType("integer");
@@ -76,9 +75,8 @@ namespace UWCAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("status")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<bool>("status")
+                        .HasColumnType("boolean");
 
                     b.Property<int>("vehicleId")
                         .HasColumnType("integer");
@@ -152,6 +150,9 @@ namespace UWCAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<bool>("isUsed")
+                        .HasColumnType("boolean");
+
                     b.Property<string>("mcpName")
                         .IsRequired()
                         .HasColumnType("text");
@@ -161,10 +162,6 @@ namespace UWCAPI.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("plateNum")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("status")
                         .IsRequired()
                         .HasColumnType("text");
 

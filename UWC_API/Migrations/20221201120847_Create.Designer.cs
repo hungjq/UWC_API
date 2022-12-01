@@ -11,7 +11,7 @@ using UWC_API.Data;
 namespace UWCAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221201083723_Create")]
+    [Migration("20221201120847_Create")]
     partial class Create
     {
         /// <inheritdoc />
@@ -40,9 +40,8 @@ namespace UWCAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("status")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<bool>("status")
+                        .HasColumnType("boolean");
 
                     b.Property<int>("vehicleId")
                         .HasColumnType("integer");
@@ -79,9 +78,8 @@ namespace UWCAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("status")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<bool>("status")
+                        .HasColumnType("boolean");
 
                     b.Property<int>("vehicleId")
                         .HasColumnType("integer");
@@ -155,6 +153,9 @@ namespace UWCAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<bool>("isUsed")
+                        .HasColumnType("boolean");
+
                     b.Property<string>("mcpName")
                         .IsRequired()
                         .HasColumnType("text");
@@ -164,10 +165,6 @@ namespace UWCAPI.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("plateNum")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("status")
                         .IsRequired()
                         .HasColumnType("text");
 

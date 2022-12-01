@@ -45,7 +45,7 @@ namespace UWC_API.Controllers
             Vehicledb.name = request.name;
             Vehicledb.plateNum= request.plateNum;
             Vehicledb.collectorName = request.collectorName;
-            Vehicledb.status = request.status;
+            Vehicledb.isUsed = request.isUsed;
             Vehicledb.capacity = request.capacity;
 
             await this.context.SaveChangesAsync();
