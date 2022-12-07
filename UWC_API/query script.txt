@@ -4,32 +4,45 @@
 
 --Collector
 INSERT INTO "Collector" Values (2052504, 'Nguyễn Hùng', TRUE, 'Nhân viên thu gom', 'Xe rác 01', 1);
-INSERT INTO "Collector" Values (2053355, 'Nguyễn Tuân', FALSE, 'Nhân viên thu gom', 'Xe rác 02', 2);
+INSERT INTO "Collector" Values (2053355, 'Nguyễn Tuân', TRUE, 'Nhân viên thu gom', 'Xe rác 02', 2);
 INSERT INTO "Collector" Values (2052832, 'Đức Anh', TRUE, 'Nhân viên thu gom', 'Xe rác 03', 3);
+INSERT INTO "Collector" Values (2056969, 'Uzu Sasuke', FALSE, 'Nhân viên thu gom','', 0);
+INSERT INTO "Collector" Values (2013582, 'Pilgrim Scarlet', FALSE, 'Nhân viên thu gom','', 0);
+INSERT INTO "Collector" Values (2238652, 'Tetra Alice', FALSE, 'Nhân viên thu gom','', 0);
+INSERT INTO "Collector" Values (1947582, 'Elysion Poli', FALSE, 'Nhân viên thu gom','', 0);
+INSERT INTO "Collector" Values (2159482, 'Missilis Admi', FALSE, 'Nhân viên thu gom','', 0);
+
 --MCP
-INSERT INTO "MCP" VALUES(1,'Tân Bình 01', '132 Tân Bình', 'Xe đẩy 1',1000,70,'2052504','Nguyễn Hùng','2053325','Kỳ Phong');
-INSERT INTO "MCP" VALUES(2,'Tân Bình 02', '152 Tân Bình', 'Xe đảy 2',1000,80,'2052504','Nguyễn Hùng','2053321','Tuấn Nhột');
-INSERT INTO "MCP" VALUES(3,'Tan Bình 03', '122 Tân Bình', 'Xe đảy 3',1000,90,'2052504','Nguyễn Hùng','2055321','Quách Quách');
-INSERT INTO "MCP" VALUES(4,'Q10 01', '66 Q10', 'Xe đảy 4',1200,80,'2053355','Nguyễn Tuân','2054565','Gia Huy');
-INSERT INTO "MCP" VALUES(5,'Q10 02', '102 Q10', 'Xe đảy 5',1100,80,'2053355','Nguyễn Tuân','2055565','Liễu Phạm');
-INSERT INTO "MCP" VALUES(6,'Q10 03', '189 Q10', 'Xe đảy 6',900,80,'2053355','Nguyễn Tuân','2056565','Ngọc Luyến');
-INSERT INTO "MCP" VALUES(7,'Phú Nhuận 01', '19A Phú Nhuận', 'Xe đảy 7',1000,100,'2052832','Đức Anh','2057565','Jackson Oii');
-INSERT INTO "MCP" VALUES(8,'Phú Nhuận 02', '126 Phú Nhuận', 'Xe đảy 8',1200,90,'2052832','Đức Anh','2058565','Connan lỏd');
-INSERT INTO "MCP" VALUES(9,'Phú Nhuận 03', '178B Phú Nhuận', 'Xe đảy 9',1300,60,'2052832','Đức Anh','2059565','Choker san');
+INSERT INTO "MCP" VALUES(1,'Tân Bình 01', '132 Tân Bình', 'Xe đẩy 1',1000,70,2052504,'Nguyễn Hùng',2053325,'Kỳ Phong');
+INSERT INTO "MCP" VALUES(2,'Tân Bình 02', '152 Tân Bình', 'Xe đẩy 2',1000,80,2052504,'Nguyễn Hùng',2053321,'Tuấn Nhột');
+INSERT INTO "MCP" VALUES(3,'Tan Bình 03', '122 Tân Bình', 'Xe đẩy 3',1000,90,2052504,'Nguyễn Hùng','2055321','Quách Quách');
+INSERT INTO "MCP" VALUES(4,'Q10 01', '66 Q10', 'Xe đẩy 4',1200,80,2053355,'Nguyễn Tuân',2054565,'Gia Huy');
+INSERT INTO "MCP" VALUES(5,'Q10 02', '102 Q10', 'Xe đẩy 5',1100,80,2053355,'Nguyễn Tuân',2055565,'Liễu Phạm');
+INSERT INTO "MCP" VALUES(6,'Q10 03', '189 Q10', 'Xe đẩy 6',900,80,2053355,'Nguyễn Tuân',2056565,'Ngọc Luyến');
+INSERT INTO "MCP" VALUES(7,'Phú Nhuận 01', '19A Phú Nhuận', 'Xe đẩy 7',1000,100,2052832,'Đức Anh',2057565,'Jackson Oii');
+INSERT INTO "MCP" VALUES(8,'Phú Nhuận 02', '126 Phú Nhuận', 'Xe đẩy 8',1200,90,2052832,'Đức Anh',2058565,'Connan Loid');
+INSERT INTO "MCP" VALUES(9,'Phú Nhuận 03', '178B Phú Nhuận', 'Xe đẩy 9',1300,60,2052832,'Đức Anh',2059565,'Choker san');
 
 -- Janitor
 INSERT INTO "Janitor" VALUES('2053325', 'Kỳ Phong', TRUE, 'Nhân viên vệ sinh', 'Xe đẩy 01', 4, 1,'Tân Bình 01');
-INSERT INTO "Janitor" VALUES('2053321','Tuấn Nhột', FALSE, 'Nhân viên vệ sinh', 'Xe đẩy 02', 5, 2,'Tân Bình 02');
+INSERT INTO "Janitor" VALUES('2053321','Tuấn Nhột', TRUE, 'Nhân viên vệ sinh', 'Xe đẩy 02', 5, 2,'Tân Bình 02');
 INSERT INTO "Janitor" VALUES('2055321','Quách Quách', TRUE, 'Nhân viên vệ sinh', 'Xe đẩy 03', 6, 3,'Tân Bình 03');
 INSERT INTO "Janitor" VALUES('2054565','Gia Huy', TRUE, 'Nhân viên vệ sinh', 'Xe đẩy 4', 7, 04,'Q10 01');
 INSERT INTO "Janitor" VALUES('2055565','Liễu Phạm', TRUE, 'Nhân viên vệ sinh', 'Xe đẩy 5', 8, 05,'Q10 02');
-INSERT INTO "Janitor" VALUES('2056565','Ngọc Luyến', FALSE, 'Nhân viên vệ sinh', 'Xe đẩy 6', 9, 06,'Q10 03');
+INSERT INTO "Janitor" VALUES('2056565','Ngọc Luyến', TRUE, 'Nhân viên vệ sinh', 'Xe đẩy 6', 9, 06,'Q10 03');
 INSERT INTO "Janitor" VALUES('2057565','Jackson Oii', TRUE, 'Nhân viên vệ sinh', 'Xe đẩy 7', 10, 07,'Phú Nhuận 01');
-INSERT INTO "Janitor" VALUES('2058565','Connan lỏd',False, 'Nhân viên vệ sinh', 'Xe đẩy 8', 11, 08,'Phú Nhuận 02');
-INSERT INTO "Janitor" VALUES('2059565','Choker san', TRUE, 'Nhân viên vệ sinh', 'Xe đẩy 9', 12, 09,'Phú Nhuận 03');
+INSERT INTO "Janitor" VALUES('2058565','Connan Loid',TRUE, 'Nhân viên vệ sinh', 'Xe đẩy 8', 11, 08,'Phú Nhuận 02');
+INSERT INTO "Janitor" VALUES('2059565','Choker San', TRUE, 'Nhân viên vệ sinh', 'Xe đẩy 9', 12, 09,'Phú Nhuận 03');
+INSERT INTO "Janitor" VALUES(2048525,'Christina Rodicha', FALSE, 'Nhân viên vệ sinh', '', 0, 0,'');
+INSERT INTO "Janitor" VALUES(2195836,'Leo Sandsnake', FALSE, 'Nhân viên vệ sinh', '', 0, 0,'');
+INSERT INTO "Janitor" VALUES(2259363,'Hairy Magaik', FALSE, 'Nhân viên vệ sinh', '', 0, 0,'');
+INSERT INTO "Janitor" VALUES(2592862,'Bruhno Festnaldes', FALSE, 'Nhân viên vệ sinh', '', 0, 0,'');
+INSERT INTO "Janitor" VALUES(2185762,'Micheal Rashforce', FALSE, 'Nhân viên vệ sinh', '', 0, 0,'');
+INSERT INTO "Janitor" VALUES(2123553,'Lautaro Woodtines', FALSE, 'Nhân viên vệ sinh', '', 0, 0,'');
 -- Vehicle
 INSERT INTO "Vehicle" VALUES(1, 'Xe rác 01', TRUE, 'FE-2000', '2500', 'Nguyễn Hùng', 'Tân Bình 01');
 INSERT INTO "Vehicle" VALUES(2, 'Xe rác 02', FALSE, 'DT-5600', '2800', '', '');
 INSERT INTO "Vehicle" VALUES(3, 'Xe rác 03', TRUE, 'GT-0000', '3000', 'Nguyễn Tuân', 'Phú Nhuận 01');
 INSERT INTO "Vehicle" VALUES(4, 'Xe rác 04', FALSE, 'FH-3000', '2500', '', '');
-INSERT INTO "Vehicle" VALUES(5, 'Xe rác 05', 'TRUE, 'FE-2700', '3000', 'Đức Anh', 'Q10 03');
+INSERT INTO "Vehicle" VALUES(5, 'Xe rác 05', TRUE, 'FE-2700', '3000', 'Đức Anh', 'Q10 03');
+INSERT INTO "Vehicle" VALUES(6, 'Xe rác 06', FALSE, 'ST-0666', '2500', '', '');

@@ -10,8 +10,8 @@ namespace UWC_API
             public string name { get; set; } = String.Empty;
             public bool status { get; set; }
             public string job { get; set; } = String.Empty;
-            public string vehicleName { get; set; } = String.Empty;
-            public int vehicleId { get; set; } = 0;
+            public string vehicleName { get; set; }
+        public int vehicleId { get; set; }
 
 
     }

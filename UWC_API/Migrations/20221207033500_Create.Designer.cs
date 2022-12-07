@@ -11,7 +11,7 @@ using UWC_API.Data;
 namespace UWCAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221201120847_Create")]
+    [Migration("20221207033500_Create")]
     partial class Create
     {
         /// <inheritdoc />
